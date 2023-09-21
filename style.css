@@ -1,0 +1,429 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+button:hover,
+.tags:hover {
+  cursor: pointer;
+}
+
+.sidebar {
+  background: #212121;
+  min-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.sidebar header {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #5b5b5b;
+}
+
+.sidebar header {
+  padding: 0.75rem 1rem 0rem 1rem;
+}
+
+.sidebar header img {
+  height: 1.4rem;
+}
+
+.sidebar header button {
+  background-color: transparent;
+  border: 0px;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.sidebar header a img {
+  margin-left: 0.4rem;
+}
+
+.sidebar header button img {
+  filter: invert(1);
+}
+
+.sidebar-content {
+  padding-right: 1rem;
+}
+
+.menu {
+  padding: 1.25rem 0rem;
+  border-bottom: 1px solid #3e3e3e;
+}
+
+.menu span {
+  padding: 0.4rem 1rem;
+  display: flex;
+  color: white;
+  width: 100%;
+}
+
+.menu span:hover {
+  cursor: pointer;
+  background-color: #383838;
+}
+
+.menu span img {
+  height: 1.7rem;
+  margin-right: 1rem;
+}
+
+.general span img {
+  filter: invert(1);
+}
+
+.menu span p {
+  position: relative;
+  top: 0.3rem;
+  font-size: 15px;
+}
+
+.menu h2 {
+  color: white;
+  opacity: 0.7;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-left: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+main {
+  background-color: #181818;
+  width: calc(100% - 15rem);
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.nav-icons button {
+  border: 0px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: transparent;
+  width: 3rem;
+  height: 3rem;
+}
+
+.nav-icons button img {
+  padding: 0.75rem;
+  height: 100%;
+  width: 100%;
+  filter: invert(1);
+}
+
+.nav-icon-profile {
+  padding: 0px !important;
+  filter: none !important;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-mobile {
+  display: none;
+}
+
+.search button {
+  border: 0px;
+  padding: 0.5rem;
+  display: flex;
+  background-color: transparent;
+}
+
+.searchbar {
+  display: flex;
+  background-color: #181818;
+  border: 2px solid #323232;
+}
+
+.searchbar button {
+  background-color: #323232;
+  border: 0px;
+  height: 2.75rem;
+  width: 4.5rem;
+  padding: 0.5rem;
+  justify-content: center;
+}
+
+.searchbar img {
+  filter: invert(1);
+  height: 100%;
+}
+
+.searchbar input {
+  background-color: transparent;
+  border: 0px;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  color: white;
+  min-width: 15rem;
+  max-width: 30rem;
+}
+
+.searchbar input:focus {
+  outline: 1px solid #4d4d4d;
+}
+
+.tags {
+  padding: 0.75rem 0.75rem;
+  display: flex;
+  gap: 1rem;
+  white-space: nowrap;
+  margin: 0px 0.5rem;
+  border-top: 1px solid #4d4d4d;
+  border-bottom: 1px solid #4d4d4d;
+}
+
+.tags::-webkit-scrollbar:horizontal {
+  height: 0.3rem;
+}
+
+.tag {
+  padding: 0.4rem 1rem;
+  background-color: #383838;
+  color: white;
+  border-radius: 2rem;
+  font-size: 15px;
+  border: 1px solid #4d4d4d;
+}
+
+.active {
+  color: #181818;
+  background-color: white;
+}
+
+.videos {
+  padding: 1rem 0.5rem 1rem 1.5rem;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.video {
+  width: 17rem;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  margin: 0.25rem;
+  padding: 0 0.4rem;
+}
+
+.mix {
+  position: relative;
+}
+
+.mix .content {
+  margin: 0px;
+}
+
+.mix img::after {
+  content: "";
+  background-image: url("assets/playlist2.png");
+}
+
+.playlist {
+  height: 1.25rem;
+  position: absolute;
+  top: 8.25rem;
+  width: calc(100% - 0.8rem);
+  background-color: rgba(147, 147, 147, 0.1);
+  backdrop-filter: blur(10px) saturate(200%);
+}
+
+.playlist img {
+  height: 100%;
+}
+
+.videos::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.videos::-webkit-scrollbar-thumb {
+  background-color: #5b5b5b;
+}
+
+.video > img {
+  margin-top: 0.4rem;
+  width: 100%;
+}
+
+.details * {
+  display: inline-block;
+}
+
+.video:hover {
+  background-color: #383838;
+  cursor: pointer;
+}
+
+.details {
+  margin: 0.5rem;
+  text-align: start;
+  display: flex;
+}
+
+.details > img {
+  height: 2rem;
+}
+
+.content {
+  margin-left: 0.7rem;
+}
+
+.title {
+  font-weight: 500;
+  max-height: 3.75rem;
+  overflow: hidden;
+  display: block;
+}
+
+.channel {
+  font-weight: 300;
+  opacity: 0.8;
+  font-size: 14px;
+  margin-top: 0.25rem;
+}
+
+.views-date {
+  font-weight: 300;
+  opacity: 0.7;
+  font-size: 14px;
+  margin-top: 0.2rem;
+  display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    padding: 0.75rem 1rem;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .sidebar {
+    display: none;
+    position: absolute;
+    z-index: 99;
+  }
+
+  .search {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .tags {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-bottom: 2.5rem;
+  }
+
+  .tag {
+    height: 2rem;
+  }
+
+  .videos {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: inherit;
+    align-items: center;
+  }
+
+  .nav-icons button {
+    display: none;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .nav-icons button img {
+    padding: 0.5rem;
+  }
+
+  .nav-icons button:last-child {
+    display: block;
+  }
+
+  .header-mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-mobile a {
+    height: 1.6rem;
+  }
+
+  .header-mobile img {
+    height: 1.6rem;
+  }
+
+  .header-mobile button img {
+    filter: invert(1);
+    margin-right: 0.5rem;
+  }
+
+  .search > button {
+    display: none;
+  }
+
+  .searchbar {
+    border: 0px;
+  }
+
+  .searchbar input {
+    display: none;
+  }
+
+  .searchbar button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 3rem;
+  }
+
+  .nav-icons {
+    display: flex;
+  }
+}
+
+.sidebar-active {
+  display: block;
+}
